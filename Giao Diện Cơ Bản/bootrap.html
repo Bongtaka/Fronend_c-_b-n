@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e63a084ca3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootrap.css">
+</head>
+<body>
+  <div class="sidebar-waper">
+    <img width="100%" class="logo" src="data:image/png;base64,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"  alt="">
+    <ul>
+        <Li><a href=""><i class="fa-solid fa-user-group"></i></a></Li>
+        <Li><a href=""><i class="fa-solid fa-comment-dots"></i></a></Li>
+        <Li><a href=""><i class="fa-solid fa-image"></i></a></Li>
+        <Li><a href=""><i class="fa-solid fa-floppy-disk"></i></a></Li>
+        <Li><a href=""><i class="fa-solid fa-thumbtack"></i></a></Li>
+        <Li><a href=""><i class="fa-solid fa-user"></i></a></Li>
+        <Li><a href=""><i class="fa-solid fa-lock"></i></a></Li>
+        <Li><a href=""><i class="fa-solid fa-chart-line"></i></a></Li>
+        <Li><a href=""><i class="fa-solid fa-tag"></i></a></Li>
+        <Li><a href=""><i class="fa-solid fa-file-invoice"></i></a></Li>
+    </ul>
+</div>
+  <div class="cmd">
+    <div class="header-icon">
+        <div class="profile"><i class="fa-solid fa-bars"></i></div>
+        <div class="icon-header"><i class="fa-solid fa-user"></i></div>
+    </div>
+    <nav class="navbar bg-body-tertiary">
+      <form class="container-fluid justify-content-start">
+       <li><a href="">Nhập file bị thiếu</a></li>
+       <li><a href="">Nhập danh sách link</a></li>
+       <li><a href="">Xuất whitelist</a></li>
+      </form>
+    </nav>
+  </div> 
+  <div class="switch-wraper">
+    <div class="lis">
+      <h3>Danh sách</h3>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+      <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+      <button ondblclick="p" >thêm Mới</button>
+    </div>
+    <div class="list">
+      <div class="liveup">
+          <div class="name">
+              <label class="custome-label" for="name">Tên</label>
+              <input class="custom-input" type="text"  id="name" placeholder="Nhập tên">
+          </div>
+          <div class="name">
+              <label for="">Loại</label>
+              <select name="" id="">
+                  <option value="">vip</option>
+                  <option value="">Thường</option>
+              </select>
+          </div>
+      </div>
+      <div class="liveup">
+          <div class="name">
+              <label for="">Danh mục</label>
+              <select name="" id="">
+                  <option value="">Đồ ăn</option>
+                  <option value="">Nước uống</option>
+              </select>
+          </div>
+      </div>
+      <div class="liveup">
+          <div class="name">
+              <label for="">điểm</label>
+              <input type="number" placeholder=" Từ   -   Đến   ">
+             </div>
+          <div class="name">
+              <label for="">Trạng thái</label>
+              <select name="" id="" >
+                  <option class="in" value="">Hoạt động</option>
+                  <option class="in" value="">Không hoạt động</option>
+              </select>
+          </div>
+      </div>
+  </div>
+
+  </div>
+  <div class="man">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Số điện thoại</th>
+              <th scope="col">Họ và tên</th>
+              <th scope="col">Điểm tích chu kỳ</th>
+              <th scope="col">Điểm tích lũy kế</th>
+              <th scope="col">Điểm hiện tại</th>
+              <th scope="col">hạng</th>
+              <th><div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">0987654321</th>
+              <td>Alisa  Do</td>
+              <td>60000</td>
+              <td>250000</td>
+              <td>250000</td>
+              <td>Thân thiết</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">0987654321</th>
+              <td>Nguyễn văn B</td>
+              <td>60000</td>
+              <td>250000</td>
+              <td>250000</td>
+              <td>Vàng</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">0987654321</th>
+              <td>Nguyễn văn C</td>
+              <td>36000</td>
+              <td>250000</td>
+              <td>250000</td>
+              <td>Bạc</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">0987654321</th>
+              <td>Nguyễn văn D</td>
+              <td>36000</td>
+              <td>250000</td>
+              <td>250000</td>
+              <td>Bạc</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">0987654321</th>
+              <td>Nguyễn văn É</td>
+              <td>36000</td>
+              <td>250000</td>
+              <td>250000</td>
+              <td>Bạc</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+</body>
+</html>

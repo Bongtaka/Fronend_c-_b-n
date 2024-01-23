@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e63a084ca3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="client.css">
+</head>
+<body>
+
+    </div>
+    <div class="sidebar-waper">
+        <div class="logo">
+            <img src="icon/logo.png" alt="logo" width="100%">
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li><a class="custom-a" href="#"><i class="fa-solid fa-user-group"></i> Khách Hàng</a></li>
+                <li><a class="custom-a" href="#"><i class="fa-regular fa-comment"></i> Phản Hồi</a></li>
+                <li><a class="custom-a"  href="#"><i class="fa-solid fa-ranking-star"></i> Hạng hội viên</a></li>
+                <li><a class="custom-a"  href="#"><i class="fa-regular fa-floppy-disk"></i> Chính sách tích điểm</a></li>
+                <li><a class="custom-a"  href="#"><i class="fa-solid fa-thumbtack"></i> Chính sách tiêu điểm</a></li>
+                <li><a class="custom-a"  href="#"><i class="fa-regular fa-user"></i> Quản trị viên</a></li>
+                <li><a class="custom-a"  href="#"><i class="fa-solid fa-lock"></i> Phân quyền</a></li>
+                <li><a class="custom-a"  href="#"><i class="fa-solid fa-chart-line"></i> Chu kì xếp hạng </a></li>
+                <li><a class="custom-a"  href="#"><i class="fa-solid fa-tag"></i> Chiến dịch</a></li>
+                <li><a class="custom-a"  href="#"><i class="fa-regular fa-newspaper"></i> Báo cáo</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-wraper">
+        <div class="header">
+            
+        </div>
+        <div class="menu">
+            <div class="breadcrumb-menu">
+                <ul>
+                    <li><a href="#">Khách hàng</a></li>
+                </ul>
+            </div>
+            <div class="btn-menu">
+                <button class="custom-btn btn-primary"><span class="text-btn">Nhập file bị thiếu</span></button>
+                <button class="custom-btn btn-primary"><span class="text-btn"> Nhập danh sách link</span></button>
+                <button class="custom-btn btn-primary"><span class="text-btn">Xuất whitelist</span></button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title-content">
+                <div class="title-text">
+                    <span>Danh sách</span>
+                </div>
+                <div class="switch-wraper">
+                    <div class="switch">
+                        <input type="checkbox" id="switch" class="switch-input">
+                        <label for="switch" class="switch-label"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-content">
+                <div class="grid">
+                    <div class="data">
+                        <label class="custome-label" for="phone">Số điện thoại</label>
+                        <input type="text" class="custom-input" placeholder="Nhập số điện thoại">
+                    </div>
+                    <div class="data">
+                        <label >Hạng</label>
+                        <select class="custom-select">
+                            <option value="">Select...</option>
+                            <option value="">Diamond red</option>
+                            <option value="">Diamond</option>
+                            <option value="">Gold</option>
+                            <option value="">Silver</option>
+                            <option value="">Copper</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="data">
+                        <label for="fromCyclePoint" class="custom-labe-point">Điểm chu kỳ</label>
+                        <div class="point">
+                            <input class="point-input input-from" type="text" id="fromCyclePoint" placeholder="Từ">
+                            <span>-</span>
+                            <input class="point-input input-to" type="text" placeholder="Đến">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="data">
+                        <label class="custom-labe-point">Điểm lũy kế</label>
+                        <div class="point">
+                            <input class="point-input input-from" type="text" placeholder="Từ">
+                            <span>-</span>
+                            <input class="point-input input-to" type="text" placeholder="Đến">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div class="btn-controll">
+                <button class="custom-btn btn-create" data-toggle="modal" data-target="#myModal"><span class="text-btn">Thêm mới</span></button>
+            </div> -->
+            <!-- Bảng input -->
+            <div id="input">
+                <table class="inputItem">
+                    <tr>
+                        <th>Số thứ tự *</th>
+                        <th>Số điện thoại *</th>
+                        <th>Họ và tên *</th>
+                        <th>Điểm tích chu kỳ *</th>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="no"></td>
+                        <td><input type="number" id="phone"></td>
+                        <td><input type="text" id="fullName"></td>
+                        <td><input type="number" id="cyclePoints"></td>
+                    </tr>
+                </table>
+
+                <table class="inputItem">
+                    <tr>
+                        <th>Điểm tích lũy kế *</th>
+                        <th>Điểm hiện tại *</th>
+                        <th>Hạng *</th>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="accumulatePoints"></td>
+                        <td><input type="number" id="currentPoints"></td>
+                        <td><input type="text" id="rank"></td>
+                    </tr>
+                </table>
+                <button class="saveData" onclick="saveData()">Save</button>
+            </div>
+            <div class="main-content">
+                <table id="tableData" class="table-data">
+                    <tr >
+                        <th style="width: 1%;">STT</th>
+                        <th>Số điện thoại</th>
+                        <th>Họ và tên</th>
+                        <th>Điểm tích chu kỳ</th>
+                        <th>Điểm tích lũy kế</th>
+                        <th>Điểm hiện tại</th>
+                        <th>Hạng</th>
+                        <th class="acction">Hành động</th>
+                    </tr>
+                    <tbody >
+
+                        
+                    </tbody>
+                   </table>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <nav aria-label="Page navigation example" class="page">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+       
+            <div class="modal-content" id="moda">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Clinet</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="pwd">Số thứ tự</label>
+                    <input type="number" class="form-control" id="no">
+                  </div>
+                <div class="form-group">
+                    <label for="pwd">Số điện thoại:</label>
+                    <input type="number" class="form-control" id="phone">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Full Name:</label>
+                    <input type="text" class="form-control" id="fullName">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Điểm tích chu kỳ:</label>
+                    <input type="text" class="form-control" id="cyclePoints">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Điểm tích lũy kế:</label>
+                    <input type="text" class="form-control" id="accumulatePoints">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Điểm hiện tại:</label>
+                    <input type="text" class="form-control" id="currentPoints">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Hạng:</label>
+                    <input type="text" class="form-control" id="rank">
+                  </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal" onclick="saveData()">Save</button>
+            </div>
+            </div>
+        </div> -->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="./client.js"></script>
+</html>

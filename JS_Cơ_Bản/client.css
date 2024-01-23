@@ -1,0 +1,425 @@
+/* commom */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --primary-color-border: rgb(156, 152, 152);
+    --color-text: #979797;
+
+    --background-content:#ffffff;
+    --border: #e8e8e8;
+    --background-header: #fafafa;
+}
+
+.custom-a{
+    text-decoration: none;
+    color: black;
+}
+
+/* tổng quát */
+
+.sidebar-waper{
+    background-color: var(--background-content);
+    width: 15%;
+    float: left;
+    height: 900px;
+    border: 1px solid var(--border);
+}
+
+.content-wraper{
+    background-color: var(--background-content);
+    width: 84%;
+    height: 900px;
+    float: left;
+}
+
+.footer{
+    background-color: rgb(152, 143, 160);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    text-align: center;
+}
+
+/* sidebar */
+
+.sidebar li{
+    list-style: none;
+    margin: 30px 40px;
+} 
+
+.sidebar li i{
+    margin-right: 7px;
+}
+.sidebar li a{
+    text-decoration: none;
+    color: rgb(112, 110, 110);
+}
+
+.logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* content */
+.content-wraper .header{
+    background-color: white;
+    height: 40px;
+    border: 1px solid var(--border);
+    margin-left: 3px;
+}
+
+/* menu */
+.menu{
+    height: 80px;
+    padding-left: 2%;
+    padding-top: 1%;
+}   
+ 
+/* breadcrumb-menu */
+.breadcrumb-menu {
+    float: left;
+}
+.breadcrumb-menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.breadcrumb-menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.breadcrumb-menu li:not(:first-child):before{
+    content: "/";
+    margin-left: 3px;
+    margin-right: 4px;
+}
+
+/* content menu */
+.content-menu{
+    margin-top: 2%;
+}
+.content-menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.content-menu li:not(:first-child) {
+    margin-left: 20px;
+}
+
+
+/*--- Header - content --- */
+.title-content{
+    border: 1px solid var(--border);
+    margin-bottom: 5px;
+    height: 50px;
+    background-color: var(--background-header);
+}
+
+.title-text {
+    padding-left: 30px;
+    padding-top: 10px;
+    float: left;
+    width: 45%;
+    background-color: var(--background-header);
+}
+
+.switch-wraper{
+    float: right;
+    width: 50%;
+}
+/* switch */
+    /* b1 tạo không gian ngoài của switch */
+    .switch{
+        position: relative; /* thêm cái này mới di chuyển qua trái phải cái hình tròn được */
+        display: inline-block;
+        width: 35px;
+        height: 20px;
+
+        margin-top: 11px;
+        margin-right: 74px;
+        float: right;
+    }
+
+    /* b2 ẩn đi checkbox để làm gia hình tròn di chuyển, tuy display none nhưng nó vẫn có thể click vào checkbox */
+    .switch-input{
+        display: none;
+    }
+
+    /* b3 tạo vùng nền chính của switch */
+    .switch-label {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: rgb(220, 217, 223);
+        border-radius: 15px;
+        cursor: pointer; /* hiển thị bàn tay khi di chuột vào */
+        transition: background-color 0.3s;
+
+    }
+
+    /* b4 thay đổi màu nền khi click vào checkbox -> switch bật */
+    .switch-input:checked + .switch-label{
+        background-color: rgb(93, 174, 231);
+    }
+
+    /* b5 tạo hình tròn của switch */
+    .switch-label::before{
+        position: absolute; /* thêm cái này mới di chuyển qua trái phải cái hình tròn được */
+        top: 0;
+        left: 0;
+        content: '';
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    /* b6 di chuyển hình tròn */
+    .switch-input:checked + .switch-label::before{
+        left: calc(100% - 50%);
+    }
+
+/* --- filter --- */
+.filter-content{
+    clear: both; /* Không chiếm chỗ của title-content */
+
+    height: 150px;
+    background-color: var(--background-content);
+}
+
+.grid{
+    background-color: var(--background-content);
+    height: 140px;
+    width: 30%;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+
+    vertical-align: top; /* Thêm thuộc tính này để không bị vỡ */
+}
+
+.data{
+    margin-left: 7%;
+    margin-top: 7%;
+    text-align: left;
+}
+
+.custom-input{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgb(186, 182, 182);
+    display: inline-block;
+    width: 221px;
+    height: 34px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.point-input{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid white;
+    display: inline-block;
+    width: 50px;
+    height: 11px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.point{
+    display: inline-block;
+    border: 1px solid rgb(186, 182, 182);
+    border-radius: 4px;
+    width: 217px;
+}
+
+.custom-select{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgb(186, 182, 182);
+    display: inline-block;
+    width: 222px;
+    height: 36px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.data label{
+    display: inline-block;
+    width: 112px;
+    text-align: left;
+    padding-right: 23px;
+}
+
+.input-from{
+    float: left;
+    display: inline-block;
+    width: 39%;
+    text-align: left;
+}
+.point span{
+    float: left;
+    display: inline-block;
+    width: 20%;
+    line-height: 28px;
+    text-align: center;
+}
+.input-to{
+    float: right;
+    display: inline-block;
+    width: 39%;
+    text-align: right;
+}
+
+/* --main content-- */
+.main-content{
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+.table-data {
+    width: 100%;
+}
+
+.table-data th{
+    text-align: left;
+    background-color: rgb(250,250,250);
+    height: 50px;
+    border-top: 1px solid #e8e8e8;
+}
+
+.table-data td{
+    height: 50px;
+    border-top: 1px solid var(--border);
+    background-color: white;
+}
+
+.table-data tr:last-child{
+    border-bottom: 1px solid var(--border);
+}
+
+.table-data th,td{
+    padding-left: 13px;
+}
+
+.content{
+    width: 95%;
+    margin-left: 2%;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    
+}
+
+
+.custom-btn{
+    display: inline-block;
+    width: 181px;
+    height: 37px;
+    border-radius: 6px;
+    border: 0px;
+    margin-right: 20px;
+}
+
+.btn-controll{
+    margin-top: 38px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+  }
+
+.text-btn{
+    color: white;
+    font-size: 17px;
+}
+
+.btn-menu{
+    float: right;
+}
+
+.btn-primary{
+    background-color: rgb(93, 174, 231);
+}
+
+.btn-create{
+    background: #3f87f5;
+}
+
+.btn-edit{
+    background-color: #2fab40;
+    width: 120px;
+}
+
+.btn-delete{
+    background-color: #f44336;
+    width: 120px;
+}
+
+/* #phone{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgb(186, 182, 182);
+    display: inline-block;
+    width: 200px;
+    height: 13px;
+    border-radius: 5px;
+    padding: 10px;
+} */
+.btn-warning{
+    width: 70px;
+    margin-top: 1px;
+    /* margin-left: 1px; */
+
+}
+.btn-danger{
+    width: 70px;
+    margin-top: 1px;
+    margin-right: 10px;
+    /* margin-left: 1px; */
+}
+.acction{
+    text-align: center !important;
+}
+.table-data tr th{
+    text-align: center !important;
+}
+.table-data tr td{
+    text-align: center !important;
+}
+.inputItem tr th{
+    padding-left: 13px;
+}
+.saveData{
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 100px;
+    background-color: #2fab40;
+    border: 1px solid #2fab40;
+    border-radius: 5px;
+    font-weight: 600;
+}
+#input{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+input{
+    border:1px solid rgb(196, 195, 195);
+    border-radius: 5px;
+    height: 30px;
+}
+.page{
+    margin-left: 1060px;
+    margin-bottom: 10px;
+}
